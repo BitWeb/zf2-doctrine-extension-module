@@ -1,0 +1,23 @@
+{
+    "name": "bitweb/zf2-doctrine-extension-module",
+    "description": "BitWeb Doctrine Extension.",
+    "license": "BSD-3-Clause",
+    "homepage": "http://bitweb.ee/",
+    "authors": [
+        {
+            "name": "Rain Ramm",
+            "email": "rain@bitweb.ee"
+        }
+    ],
+    "require": {
+        "zendframework/zend-servicemanager":"~2.3",
+        "zendframework/zend-modulemanager":"~2.3",
+        "zendframework/zend-mvc":"~2.3",
+        "bitweb/doctrine-extension": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
