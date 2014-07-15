@@ -29,7 +29,7 @@ class Module implements ConfigProviderInterface, BootstrapListenerInterface
 
         $locator = $e->getApplication()->getServiceManager();
 
-        Type::addType('file', 'BitWebExtension\Type\FileType');
+        Type::addType('file', 'BitWeb\DoctrineExtension\Type\FileType');
 
         File::setDefaultBasePath(dirname($_SERVER['SCRIPT_FILENAME']) . '/files');
         File::setDefaultUploadBasePath(File::getDefaultBasePath());
@@ -39,7 +39,7 @@ class Module implements ConfigProviderInterface, BootstrapListenerInterface
 
         new FileListener($em->getEventManager());
 
-        AnnotationRegistry::registerFile(__DIR__ . '/src/BitWebExtension/Mapping/File.php');
+        AnnotationRegistry::registerFile(__DIR__ . '/../../../../doctrine-extension/src/Mapping/File.php');
     }
 
     public function getConfig()
