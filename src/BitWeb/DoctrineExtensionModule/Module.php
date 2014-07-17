@@ -4,6 +4,7 @@ namespace BitWeb\DoctrineExtensionModule;
 
 use BitWeb\DoctrineExtension\File;
 use BitWeb\DoctrineExtension\Listener\FileListener;
+use BitWeb\DoctrineExtension\Type\FileType;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\DBAL\Types\Type;
 use Zend\EventManager\EventInterface;
@@ -26,10 +27,9 @@ class Module implements ConfigProviderInterface, BootstrapListenerInterface
 
     public function initializeBitWebDoctrineExtensions(MvcEvent $e)
     {
-
         $locator = $e->getApplication()->getServiceManager();
 
-        Type::addType('file', 'BitWeb\DoctrineExtension\Type\FileType');
+        Type::addType('file', FileType::class);
 
         File::setDefaultBasePath(dirname($_SERVER['SCRIPT_FILENAME']) . '/files');
         File::setDefaultUploadBasePath(File::getDefaultBasePath());
