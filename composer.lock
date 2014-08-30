@@ -12,24 +12,28 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/BitWeb/doctrine-extension.git",
-                "reference": "d1183523f62a04a03175b6fa0e257f52870415b8"
+                "reference": "6dc0cef05f2f36b3d7ef7a3a7ac243237ebe4056"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BitWeb/doctrine-extension/zipball/d1183523f62a04a03175b6fa0e257f52870415b8",
-                "reference": "d1183523f62a04a03175b6fa0e257f52870415b8",
+                "url": "https://api.github.com/repos/BitWeb/doctrine-extension/zipball/6dc0cef05f2f36b3d7ef7a3a7ac243237ebe4056",
+                "reference": "6dc0cef05f2f36b3d7ef7a3a7ac243237ebe4056",
                 "shasum": ""
             },
             "require": {
-                "bitweb/stdlib": "~1.1.0",
-                "doctrine/dbal": "~2.4.2",
-                "doctrine/orm": "~2.4.4",
-                "zendframework/zend-filter": "~2.3.0"
+                "bitweb/stdlib": "~1.1",
+                "doctrine/dbal": "~2.4",
+                "doctrine/orm": "~2.4",
+                "zendframework/zend-filter": "~2.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "BitWeb\\DoctrineExtension\\": "src/"
+                    "BitWeb\\DoctrineExtension\\": "src/",
+                    "BitWebTest\\DoctrineExtension\\": "test/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -44,20 +48,20 @@
             ],
             "description": "BitWeb Doctrine Extension.",
             "homepage": "http://bitweb.ee/",
-            "time": "2014-07-12 13:00:57"
+            "time": "2014-08-30 17:07:47"
         },
         {
             "name": "bitweb/stdlib",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BitWeb/stdlib.git",
-                "reference": "85c8272d48c030308539117eaf0b24ad89155a3f"
+                "reference": "90787d414690dde5ce8fc2ecc33ae78762659b50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BitWeb/stdlib/zipball/85c8272d48c030308539117eaf0b24ad89155a3f",
-                "reference": "85c8272d48c030308539117eaf0b24ad89155a3f",
+                "url": "https://api.github.com/repos/BitWeb/stdlib/zipball/90787d414690dde5ce8fc2ecc33ae78762659b50",
+                "reference": "90787d414690dde5ce8fc2ecc33ae78762659b50",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +85,7 @@
             ],
             "description": "BitWeb library for standard functions.",
             "homepage": "http://bitweb.ee/",
-            "time": "2014-04-16 10:25:31"
+            "time": "2014-07-15 09:20:49"
         },
         {
             "name": "doctrine/annotations",
@@ -636,17 +640,17 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.5.1",
+            "version": "v2.5.3",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "2e3df33dd72a9cdef7e9745d930e29ff844fe055"
+                "reference": "cd2d1e4bac2206b337326b0140ff475fe9ad5f63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/2e3df33dd72a9cdef7e9745d930e29ff844fe055",
-                "reference": "2e3df33dd72a9cdef7e9745d930e29ff844fe055",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/cd2d1e4bac2206b337326b0140ff475fe9ad5f63",
+                "reference": "cd2d1e4bac2206b337326b0140ff475fe9ad5f63",
                 "shasum": ""
             },
             "require": {
@@ -677,33 +681,31 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-08 12:21:33"
+            "time": "2014-08-05 09:00:40"
         },
         {
             "name": "zendframework/zend-eventmanager",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/EventManager",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendEventManager.git",
-                "reference": "048164ee81854942667ffdda3030ce06caa79bb5"
+                "reference": "957faa0580c40ef6bf6cf3e87a36d594042fe133"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendEventManager/zipball/048164ee81854942667ffdda3030ce06caa79bb5",
-                "reference": "048164ee81854942667ffdda3030ce06caa79bb5",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendEventManager/zipball/957faa0580c40ef6bf6cf3e87a36d594042fe133",
+                "reference": "957faa0580c40ef6bf6cf3e87a36d594042fe133",
                 "shasum": ""
             },
             "require": {
@@ -713,8 +715,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -730,21 +732,21 @@
                 "eventmanager",
                 "zf2"
             ],
-            "time": "2014-03-14 16:21:05"
+            "time": "2014-04-15 14:47:18"
         },
         {
             "name": "zendframework/zend-filter",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/Filter",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendFilter.git",
-                "reference": "95e05d19a6941f93546103af1964995213994a8b"
+                "reference": "1889b7aa499beccadac770780a73e1a40e0f8a53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendFilter/zipball/95e05d19a6941f93546103af1964995213994a8b",
-                "reference": "95e05d19a6941f93546103af1964995213994a8b",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendFilter/zipball/1889b7aa499beccadac770780a73e1a40e0f8a53",
+                "reference": "1889b7aa499beccadac770780a73e1a40e0f8a53",
                 "shasum": ""
             },
             "require": {
@@ -765,8 +767,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -783,21 +785,21 @@
                 "filter",
                 "zf2"
             ],
-            "time": "2014-03-14 16:21:18"
+            "time": "2014-04-15 15:28:47"
         },
         {
             "name": "zendframework/zend-modulemanager",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/ModuleManager",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendModuleManager.git",
-                "reference": "954012707a639eb91f32b89173f5c1c413623072"
+                "reference": "bfff608492fdfea1f2b815285e0ed8b467a99c9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendModuleManager/zipball/954012707a639eb91f32b89173f5c1c413623072",
-                "reference": "954012707a639eb91f32b89173f5c1c413623072",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendModuleManager/zipball/bfff608492fdfea1f2b815285e0ed8b467a99c9f",
+                "reference": "bfff608492fdfea1f2b815285e0ed8b467a99c9f",
                 "shasum": ""
             },
             "require": {
@@ -822,8 +824,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -839,21 +841,21 @@
                 "modulemanager",
                 "zf2"
             ],
-            "time": "2014-03-12 17:04:28"
+            "time": "2014-04-15 15:28:50"
         },
         {
             "name": "zendframework/zend-mvc",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/Mvc",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendMvc.git",
-                "reference": "9171841f8b2cdb914dba972878ec78b9885352d0"
+                "reference": "d7708af7028aa6c42255fe2d9ece53f0e5d76e2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendMvc/zipball/9171841f8b2cdb914dba972878ec78b9885352d0",
-                "reference": "9171841f8b2cdb914dba972878ec78b9885352d0",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendMvc/zipball/d7708af7028aa6c42255fe2d9ece53f0e5d76e2c",
+                "reference": "d7708af7028aa6c42255fe2d9ece53f0e5d76e2c",
                 "shasum": ""
             },
             "require": {
@@ -872,6 +874,7 @@
                 "zendframework/zend-i18n": "self.version",
                 "zendframework/zend-inputfilter": "self.version",
                 "zendframework/zend-json": "self.version",
+                "zendframework/zend-log": "self.version",
                 "zendframework/zend-modulemanager": "self.version",
                 "zendframework/zend-serializer": "self.version",
                 "zendframework/zend-session": "self.version",
@@ -892,6 +895,7 @@
                 "zendframework/zend-i18n": "Zend\\I18n component for translatable segments",
                 "zendframework/zend-inputfilter": "Zend\\Inputfilter component",
                 "zendframework/zend-json": "Zend\\Json component",
+                "zendframework/zend-log": "Zend\\Log component",
                 "zendframework/zend-modulemanager": "Zend\\ModuleManager component",
                 "zendframework/zend-serializer": "Zend\\Serializer component",
                 "zendframework/zend-session": "Zend\\Session component for FlashMessenger, PRG, and FPRG plugins",
@@ -905,8 +909,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -922,21 +926,21 @@
                 "mvc",
                 "zf2"
             ],
-            "time": "2014-03-12 17:04:30"
+            "time": "2014-04-15 15:29:05"
         },
         {
             "name": "zendframework/zend-servicemanager",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/ServiceManager",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendServiceManager.git",
-                "reference": "310187f89fe830ed4484499f78338631f29d25c7"
+                "reference": "652ab6e142b7afd1eede8f0f33b47d2599786c84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendServiceManager/zipball/310187f89fe830ed4484499f78338631f29d25c7",
-                "reference": "310187f89fe830ed4484499f78338631f29d25c7",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendServiceManager/zipball/652ab6e142b7afd1eede8f0f33b47d2599786c84",
+                "reference": "652ab6e142b7afd1eede8f0f33b47d2599786c84",
                 "shasum": ""
             },
             "require": {
@@ -951,8 +955,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -968,21 +972,21 @@
                 "servicemanager",
                 "zf2"
             ],
-            "time": "2014-03-14 16:22:14"
+            "time": "2014-04-15 15:28:43"
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "target-dir": "Zend/Stdlib",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendStdlib.git",
-                "reference": "d1c481b8a43f2f079b16d3567960ba539e9dacaa"
+                "reference": "c1f4830018b5d4f034d32fa01a9e17ea176f56f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/d1c481b8a43f2f079b16d3567960ba539e9dacaa",
-                "reference": "d1c481b8a43f2f079b16d3567960ba539e9dacaa",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/c1f4830018b5d4f034d32fa01a9e17ea176f56f6",
+                "reference": "c1f4830018b5d4f034d32fa01a9e17ea176f56f6",
                 "shasum": ""
             },
             "require": {
@@ -1001,8 +1005,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev",
-                    "dev-develop": "2.3-dev"
+                    "dev-master": "2.3-dev",
+                    "dev-develop": "2.4-dev"
                 }
             },
             "autoload": {
@@ -1018,23 +1022,16 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2014-03-14 16:22:22"
+            "time": "2014-04-15 15:28:48"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "bitweb/doctrine-extension": 20
     },
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
 }
