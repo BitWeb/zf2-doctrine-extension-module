@@ -5,7 +5,9 @@ namespace BitWebDoctrineExtensionModule;
 use BitWeb\DoctrineExtension\File;
 use BitWeb\DoctrineExtension\Filter\SoftDeleteFilter;
 use BitWeb\DoctrineExtension\Listener\FileListener;
+use BitWeb\DoctrineExtension\Listener\IpListener;
 use BitWeb\DoctrineExtension\Listener\SoftDeletableListener;
+use BitWeb\DoctrineExtension\Listener\UserAgentListener;
 use BitWeb\DoctrineExtension\Type\FileType;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\DBAL\Types\Type;
@@ -43,11 +45,15 @@ class Module implements ConfigProviderInterface, BootstrapListenerInterface
         $em->getFilters()->enable('SoftDelete');
 
         new FileListener($em->getEventManager());
+        new IpListener($em->getEventManager());
         new SoftDeletableListener($em->getEventManager());
+        new UserAgentListener($em->getEventManager());
 
         $annotationBaseDir = __DIR__ . '/../../../doctrine-extension/src/Mapping/';
         AnnotationRegistry::registerFile($annotationBaseDir . 'File.php');
+        AnnotationRegistry::registerFile($annotationBaseDir . 'Ip.php');
         AnnotationRegistry::registerFile($annotationBaseDir . 'SoftDeletable.php');
+        AnnotationRegistry::registerFile($annotationBaseDir . 'UserAgent.php');
     }
 
     public function getConfig()
