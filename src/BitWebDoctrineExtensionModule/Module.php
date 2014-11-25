@@ -3,12 +3,10 @@
 namespace BitWebDoctrineExtensionModule;
 
 use BitWeb\DoctrineExtension\File;
-use BitWeb\DoctrineExtension\Filter\SoftDeleteFilter;
 use BitWeb\DoctrineExtension\Listener\FileListener;
 use BitWeb\DoctrineExtension\Listener\IpListener;
 use BitWeb\DoctrineExtension\Listener\SoftDeletableListener;
 use BitWeb\DoctrineExtension\Listener\UserAgentListener;
-use BitWeb\DoctrineExtension\Type\FileType;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\EntityManager;
@@ -34,14 +32,14 @@ class Module implements ConfigProviderInterface, BootstrapListenerInterface
     {
         $locator = $e->getApplication()->getServiceManager();
 
-        Type::addType('file', FileType::class);
+        Type::addType('file', 'BitWeb\DoctrineExtension\Type\FileType');
 
         File::setDefaultBasePath(dirname($_SERVER['SCRIPT_FILENAME']) . '/files');
         File::setDefaultUploadBasePath(File::getDefaultBasePath());
 
         /* @var $em EntityManager */
-        $em = $locator->get(EntityManager::class);
-        $em->getConfiguration()->addFilter('SoftDelete', SoftDeleteFilter::class);
+        $em = $locator->get('Doctrine\ORM\EntityManager');
+        $em->getConfiguration()->addFilter('SoftDelete', 'BitWeb\DoctrineExtension\Filter\SoftDeleteFilter');
         $em->getFilters()->enable('SoftDelete');
 
         new FileListener($em->getEventManager());
