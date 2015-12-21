@@ -13,23 +13,28 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\EntityManager;
 use Zend\EventManager\EventInterface;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\BootstrapListenerInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\Mvc\MvcEvent;
 
-class Module implements ConfigProviderInterface, BootstrapListenerInterface
+class Module implements ConfigProviderInterface, BootstrapListenerInterface, AutoloaderProviderInterface
 {
     /**
-     * Listen to the bootstrap event
-     *
-     * @param EventInterface $e
-     * @return array
+     * @inheritdoc
      */
     public function onBootstrap(EventInterface $e)
     {
         $this->initializeBitWebDoctrineExtensions($e);
     }
 
+    /**
+     * Initialize listeners and annotations required for extensions
+     *
+     * @param MvcEvent $e
+     *
+     * @throws \Doctrine\DBAL\DBALException
+     */
     public function initializeBitWebDoctrineExtensions(MvcEvent $e)
     {
         $locator = $e->getApplication()->getServiceManager();
@@ -56,8 +61,27 @@ class Module implements ConfigProviderInterface, BootstrapListenerInterface
         AnnotationRegistry::registerFile($annotationBaseDir . 'UserAgent.php');
     }
 
+    /**
+     * @inheritdoc
+     */
     public function getConfig()
     {
         return include __DIR__ . '/../../config/module.config.php';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getAutoloaderConfig()
+    {
+        $dir = dirname(dirname(dirname(__DIR__)));
+
+        return [
+            'Zend\Loader\StandardAutoloader' => [
+                'namespaces' => [
+                    __NAMESPACE__ => $dir . '/src/' . __NAMESPACE__,
+                ],
+            ],
+        ];
     }
 }
