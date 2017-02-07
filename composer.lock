@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "344de8cb4bd80d6c6637cd023e2c2a86",
+    "content-hash": "c294b631f41401d6585813ab0bdb1e67",
     "packages": [
         {
             "name": "bitweb/doctrine-extension",
-            "version": "dev-master",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BitWeb/doctrine-extension.git",
-                "reference": "0d8e3b52d4c23c5eebc35aa95ae48d817a3e6c82"
+                "reference": "66715416fa8c47ec4213a90ea38951fa838614b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BitWeb/doctrine-extension/zipball/0d8e3b52d4c23c5eebc35aa95ae48d817a3e6c82",
-                "reference": "0d8e3b52d4c23c5eebc35aa95ae48d817a3e6c82",
+                "url": "https://api.github.com/repos/BitWeb/doctrine-extension/zipball/66715416fa8c47ec4213a90ea38951fa838614b7",
+                "reference": "66715416fa8c47ec4213a90ea38951fa838614b7",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
             ],
             "description": "BitWeb Doctrine Extension.",
             "homepage": "http://bitweb.ee/",
-            "time": "2017-02-07 12:39:54"
+            "time": "2017-02-07T12:50:32+00:00"
         },
         {
             "name": "bitweb/stdlib",
@@ -1962,9 +1962,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "bitweb/doctrine-extension": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
