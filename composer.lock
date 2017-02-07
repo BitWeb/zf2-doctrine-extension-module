@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/BitWeb/doctrine-extension.git",
-                "reference": "9a45b0261895840ead12de23eaa6fc59d5a1e47f"
+                "reference": "0d8e3b52d4c23c5eebc35aa95ae48d817a3e6c82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BitWeb/doctrine-extension/zipball/9a45b0261895840ead12de23eaa6fc59d5a1e47f",
-                "reference": "9a45b0261895840ead12de23eaa6fc59d5a1e47f",
+                "url": "https://api.github.com/repos/BitWeb/doctrine-extension/zipball/0d8e3b52d4c23c5eebc35aa95ae48d817a3e6c82",
+                "reference": "0d8e3b52d4c23c5eebc35aa95ae48d817a3e6c82",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
             ],
             "description": "BitWeb Doctrine Extension.",
             "homepage": "http://bitweb.ee/",
-            "time": "2017-02-07 09:46:38"
+            "time": "2017-02-07 12:39:54"
         },
         {
             "name": "bitweb/stdlib",
